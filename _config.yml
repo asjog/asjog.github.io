@@ -1,0 +1,29 @@
+# Dependencies
+#markdown:         redcarpet
+highlighter:      pygments
+#pygments: true
+#
+gems: [jekyll-paginate, jekyll-gist]
+# Permalinks
+permalink:        pretty
+relative_permalinks: false
+
+
+# Setup
+title:            Amod Jog
+tagline:          Amod Jog
+description:      Postdoctoral Fellow at <a href="http://iacl.ece.jhu.edu" target="_blank">IACL</a>
+url:              www.iacl.jhu.edu/Amod
+baseurl:          /
+
+author:
+  name:           Amod Jog
+  url:            https://www.iacl.ece.jhu.edu/Amod
+
+paginate:         5
+
+# Custom vars
+# version:          2.1.0
+
+# github:
+#  repo:           https://github.com/asjog/asjog.github.io
