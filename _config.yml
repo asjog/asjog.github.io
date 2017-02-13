@@ -27,3 +27,5 @@ paginate:         5
 
 # github:
 #  repo:           https://github.com/asjog/asjog.github.io
+# Google services
+google_analytics: UA-91879051-1
