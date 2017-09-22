@@ -68,7 +68,7 @@ time it took to learn Tcl and changing the different variables to get the figure
 I wanted.
 
 fsaverage brain with thickness differences:
-![alt text][https://github.com/asjog/asjog.github.io/blob/master/images/fsaverage_surf.jpg "fsaverage thickness"]
+![alt text](https://github.com/asjog/asjog.github.io/blob/master/images/fsaverage_surf.jpg "fsaverage thickness")
 
 
 
