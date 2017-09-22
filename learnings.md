@@ -2,7 +2,7 @@
 layout: page
 title: Learnings
 ---
-## H2 Using tksurfer for visualizing cortical thicknesses </h2>
+## Using tksurfer for visualizing cortical thicknesses </h2>
 I have just started exploring effects of scanner on surfaces and surface thicknesses produced by Freesurfer.
 To that end, I needed to learn how to produce surface renderings using tksurfer on an industrial scale.
 To do that using tksurfer needed me to write a Tcl script (a language that I did not existed until yesterday).
