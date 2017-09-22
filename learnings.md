@@ -62,6 +62,15 @@ foreach scanner { A B C D E F G H } {
 	save_tiff ${out_medial}
 ```
 
+And I am able to generate figures like below for multiple datasets at a keystroke.
+Since I need to generate these figures on a regular basis, it should be worth the 
+time it took to learn Tcl and changing the different variables to get the figure
+I wanted.
+
+fsaverage brain with thickness differences:
+![Look's nice doesn't it? It'd better.][fsaverage_surf]
+
+[fsaverage_surf]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
 
 
 
