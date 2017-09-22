@@ -70,7 +70,6 @@ I wanted.
 fsaverage brain with thickness differences:
 ![Look's nice doesn't it? It'd better.][fsaverage_surf]
 
-[fsaverage_surf]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
-
+[fsaverage_surf]: https://github.com/asjog/asjog.github.io/blob/master/images/fsaverage_surf.tiff "fsaverage thickness"
 
 
