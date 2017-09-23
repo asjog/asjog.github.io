@@ -5,8 +5,8 @@ highlighter:      pygments
 #
 gems: [jekyll-paginate, jekyll-gist]
 # Permalinks
-permalink:        pretty
-relative_permalinks: false
+
+
 
 
 # Setup

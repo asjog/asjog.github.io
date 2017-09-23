@@ -4,7 +4,7 @@
  <title>Amod Jog</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2017-09-23T02:15:32-04:00</updated>
+ <updated>2017-09-23T02:25:00-04:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Amod Jog</name>
@@ -14,7 +14,7 @@
  
  <entry>
    <title>Learnings</title>
-   <link href="http://localhost:4000/2017/09/22/tksurfer/"/>
+   <link href="http://localhost:4000/2017/09/22/tksurfer.html"/>
    <updated>2017-09-22T00:00:00-04:00</updated>
    <id>http://localhost:4000/2017/09/22/tksurfer</id>
    <content type="html">&lt;h2 id=&quot;using-tksurfer-for-visualizing-cortical-thicknesses&quot;&gt;Using tksurfer for visualizing cortical thicknesses&lt;/h2&gt;
@@ -88,7 +88,7 @@ I wanted.&lt;/p&gt;
  
  <entry>
    <title>Hello and नमस्कार</title>
-   <link href="http://localhost:4000/2016/11/30/intro/"/>
+   <link href="http://localhost:4000/2016/11/30/intro.html"/>
    <updated>2016-11-30T00:00:00-05:00</updated>
    <id>http://localhost:4000/2016/11/30/intro</id>
    <content type="html">&lt;p&gt;I am a postdoctoral fellow at the &lt;a href=&quot;http://www.iacl.ece.jhu.edu&quot;&gt;Image Analysis and Communications Laboratory&lt;/a&gt;
