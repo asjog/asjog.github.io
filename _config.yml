@@ -12,15 +12,17 @@ permalink:        pretty
 # Setup
 title:            Amod Jog
 tagline:          Amod Jog
-description:      Research Fellow at <a href="https://martinos.org/lab/lcn" target="_blank">LCN at Martinos</a>
-url:              www.iacl.jhu.edu/Amod
+description:      Research Fellow at <a href="https://martinos.org/lab/lcn" target="_blank">Laboratory of Computational Neuroimaging, MGH/HST Athinoula A. Martinos Center for Biomedical Imaging</a>
+url:              www.asjog.github.io
 baseurl:          /
 
 author:
   name:           Amod Jog
-  url:            https://www.iacl.ece.jhu.edu/Amod
+  url:            www.asjog.github.io
 
 paginate:         5
+
+#paginate_path:		"/notes/page:num/"
 
 # Custom vars
 # version:          2.1.0

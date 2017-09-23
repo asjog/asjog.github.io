@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Amod Jog</title>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/"/>
+ <updated>2017-09-23T01:28:24-04:00</updated>
+ <id>http://localhost:4000</id>
+ <author>
+   <name>Amod Jog</name>
+   <email></email>
+ </author>
+
+ 
+ <entry>
+   <title>Learnings</title>
+   <link href="http://localhost:4000/2017/09/22/tksurfer/"/>
+   <updated>2017-09-22T00:00:00-04:00</updated>
+   <id>http://localhost:4000/2017/09/22/tksurfer</id>
+   <content type="html">&lt;h2 id=&quot;using-tksurfer-for-visualizing-cortical-thicknesses&quot;&gt;Using tksurfer for visualizing cortical thicknesses&lt;/h2&gt;
+&lt;p&gt;I have just started exploring effects of scanner on surfaces and surface thicknesses produced by Freesurfer.
+To that end, I needed to learn how to produce surface renderings using tksurfer on an industrial scale.
+To do that using tksurfer needed me to write a Tcl script (a language that I did not existed until yesterday).
+It is quite a fun language but using it I can generate figures for multiple datasets by the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$&amp;gt; tksurfer fsaverage lh inflated -tcl tksurfer_save_abs_rel_thickness_figs.tcl -curv lh.sulc -colscalebarflag 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This calls tksurfer with the tcl script.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;The tclscript looks like following:
+
+set base_dir  my_base_dir
+set meas some_suffix_i_came_up_with
+set out_suffix_lateral _lateral.tiff
+set out_suffix_medial _medial.tiff
+
+set overlayflag 1
+
+
+set colscalebarfig 1
+
+set forcegraycurvatureflag 1
+set gaLinkedVars(colscale) 1
+foreach scanner { A B C D E F G H } {
+
+	set file_name $base_dir$scanner/$scanner$meas.mgh
+	set out_lateral $base_dir$scanner/$scanner$meas$out_suffix_lateral
+	set out_medial $base_dir$scanner/$scanner$meas$out_suffix_medial
+	puts $file_name
+	puts $out_lateral
+	puts $out_medial
+	set val $file_name
+	sclv_read_from_dotw 0
+
+	set gaLinkedVars(fopaqueflag) 0
+	set gaLinkedVars(fthresh) 5.0
+	set gaLinkedVars(fmid) 20.0
+	set gaLinkedVars(fslope) 1
+	set gaLinkedVars(truncphaseflag) 1
+
+	SendLinkedVarGroup overlay
+
+
+	set gaLinkedVars(colscalebarfig) 1
+	SendLinkedVarGroup view
+
+	redraw
+	set colscalebarfig 1
+	redraw
+
+	save_tiff ${out_lateral}
+	
+	rotate_brain_y 180
+	redraw
+	save_tiff ${out_medial}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And I am able to generate figures like below for multiple datasets at a keystroke.
+Since I need to generate these figures on a regular basis, it should be worth the 
+time it took to learn Tcl and changing the different variables to get the figure
+I wanted.&lt;/p&gt;
+
+&lt;p&gt;fsaverage brain with thickness differences:
+&lt;img src=&quot;/images/fsaverage_surf.jpg&quot; alt=&quot;alt text&quot; title=&quot;fsaverage thickness&quot; /&gt;&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Hello and नमस्कार</title>
+   <link href="http://localhost:4000/2016/11/30/intro/"/>
+   <updated>2016-11-30T00:00:00-05:00</updated>
+   <id>http://localhost:4000/2016/11/30/intro</id>
+   <content type="html">&lt;p&gt;I am a postdoctoral fellow at the &lt;a href=&quot;http://www.iacl.ece.jhu.edu&quot;&gt;Image Analysis and Communications Laboratory&lt;/a&gt;
+My research interests are in medical image analysis, computer vision, and machine learning.&lt;/p&gt;
+
+&lt;p&gt;At IACL I have been involved in:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Image synthesis of brain MRI to enable consistent image analysis&lt;/li&gt;
+  &lt;li&gt;Tongue motion analysis during speech using cine MRI, tagged MRI, and diffusion tensor imaging of the tongue&lt;/li&gt;
+  &lt;li&gt;Building neuroimage processing pipelines for efficient and reproducible image analysis&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I completed my Ph.D in &lt;a href=&quot;https://www.cs.jhu.edu&quot;&gt;Computer Science&lt;/a&gt; at the &lt;a href=&quot;https://www.jhu.edu&quot;&gt;Johns Hopkins University&lt;/a&gt;, where I was advised by &lt;a href=&quot;http://iacl.ece.jhu.edu/index.php/Prince&quot;&gt;Dr. Jerry L. Prince&lt;/a&gt; at the &lt;a href=&quot;https://www.iacl.ece.jhu.edu&quot;&gt;Image Analysis and Communications Laboratory (IACL)&lt;/a&gt;. I developed novel image synthesis algorithms for brain MRI images and demonstrated several successful applications for synthetic MRI images.&lt;/p&gt;
+
+&lt;p&gt;You can read my &lt;a href=&quot;pdfs/thesis-amod-jog-2016.pdf&quot;&gt;thesis&lt;/a&gt; here.&lt;/p&gt;
+
+&lt;p&gt;From 2009-2011, I was a research assistant at the Visual Imaging and Surgical Robotics (VISR) lab at the Laboratory for &lt;a href=&quot;https://www.lcsr.jhu.edu&quot;&gt;Computational Sensing and Robotics&lt;/a&gt; working with Dr. Rajesh Kumar to develop objective skill-assessment criteria for surgeons using the da Vinci surgical robot.&lt;/p&gt;
+
+&lt;p&gt;Previously, I earned my B.Tech degree in &lt;a href=&quot;https://www.cse.iitb.ac.in&quot;&gt;Computer Science and Engineering&lt;/a&gt; at the &lt;a href=&quot;https://www.iitb.ac.in&quot;&gt;Indian Institute of Technology Bombay&lt;/a&gt;. At IITB, I worked with &lt;a href=&quot;https://www.cse.iitb.ac.in/~sharat&quot;&gt;Dr. Sharat Chandran&lt;/a&gt; and also interned with &lt;a href=&quot;https://www.case.edu/medicine/ccir/faculty/anant-madabhushi-phd.html&quot;&gt;Dr. Anant Madabhushi&lt;/a&gt; at Rutgers University. My undergraduate research experience sparked my interest in medical image analysis.&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>
