@@ -1,12 +1,12 @@
 # Dependencies
 #markdown:         redcarpet
-#highlighter:      rouge
-pygments: true
+highlighter:      pygments
+#pygments: true
 #
 gems: [jekyll-paginate, jekyll-gist]
 # Permalinks
 permalink:        pretty
-#relative_permalinks: false
+relative_permalinks: false
 
 
 # Setup
@@ -22,7 +22,7 @@ author:
 
 paginate:         5
 
-#paginate_path:		"/notes/page:num/"
+
 
 # Custom vars
 # version:          2.1.0
