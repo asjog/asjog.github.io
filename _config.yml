@@ -13,7 +13,7 @@ gems: [jekyll-paginate, jekyll-gist]
 title:            Amod Jog
 tagline:          Amod Jog
 description:      Research Fellow at <a href="https://martinos.org/lab/lcn" target="_blank">Laboratory of Computational Neuroimaging, MGH/HST Athinoula A. Martinos Center for Biomedical Imaging</a>
-url:              /
+url:              https://asjog.github.io/
 baseurl:          /
 
 author:
