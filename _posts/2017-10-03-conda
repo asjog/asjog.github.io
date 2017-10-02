@@ -1,0 +1,22 @@
+---
+layout: page
+title: Learnings
+---
+## Using conda envs 
+Situation: You have a python installation (or a conda environment) that is 
+installed in root that you can't edit and you need to add your packages to do your own work.
+Based on my understanding of virtual environments, the ideal way to work in this scenario is
+to clone the root environment into your user space and work with the clone.
+
+```
+$> conda create --prefix /home/username/my_env --clone="/usr/python/anaconda2.7/envs/root_env"
+```
+This creates the environment, but if you try to see if conda lists it, using 
+```
+$> conda list envs
+```
+you will only see environments created by root. To activate my_env you need to give the full path to my_env
+```
+$> source activate /home/username/my_env
+```
+
