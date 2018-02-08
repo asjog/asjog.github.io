@@ -1,0 +1,10 @@
+---
+layout: page
+title: rm
+---
+## Removing files older that N days
+
+```
+$> find ./ -type f -mtime +N -name '*.h5' -print0 | xargs -r0 rm --
+
+```
